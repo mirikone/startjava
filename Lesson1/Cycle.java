@@ -1,11 +1,10 @@
-
 public class Cycle {
-    public static void main(String []args) {
+    public static void main(String[] args) {
         for(int i = 0; i<=20; i++) {
             System.out.print(i + " ");
         }
 
-        System.out.println(" ");
+        System.out.println();
 
         int x = 6;
         while(x >= -6) {
@@ -13,7 +12,8 @@ public class Cycle {
             x = x - 2;
         }
 
-        System.out.println(" ");
+        System.out.println();
+
         int num = 0;
         int y = 10;
         do {
@@ -21,7 +21,7 @@ public class Cycle {
                 num = y + num;
             }
             y++;
-        }while (y <= 20);
+        } while (y <= 20);
         System.out.print(num);
     }
 }

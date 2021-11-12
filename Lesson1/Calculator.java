@@ -1,5 +1,5 @@
 public class Calculator {
-    public static void main(String[ ] args) {
+    public static void main(String[] args) {
         int x = 5;
         int y = 3;
         char s = '/';
