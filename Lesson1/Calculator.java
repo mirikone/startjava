@@ -20,6 +20,7 @@ public class Calculator {
             }
         } else if(symbol == '/') {
             result = firstNumber / secondNumber;
-        } System.out.println(result);
+        } 
+        System.out.println(result);
     }
 }
