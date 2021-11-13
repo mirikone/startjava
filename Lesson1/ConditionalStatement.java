@@ -4,12 +4,13 @@ public class ConditionalStatement {
         if (age > 20) {
             System.out.println("Тебе больше 20 лет");
         }
-        boolean man = true;
-        if (man) {
+
+        boolean male = true;
+        if (male) {
             System.out.println("Ты представитель мужского пола");
         }
 
-        if (!man) {
+        if (!male) {
             System.out.println("Ты представитель женского пола");
         }
 
