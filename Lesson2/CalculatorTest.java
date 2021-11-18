@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
+        char reply;
         Calculator calc = new Calculator();
         Scanner scanner = new Scanner(System.in);
         while(true) {
@@ -12,19 +13,19 @@ public class CalculatorTest {
             calc.setSecondNumber(scanner.nextInt());
 
             System.out.println("Введите знак математической операции: ");
-            calc.setSymbol(scanner.next().charAt(0));
+            calc.setSign(scanner.next().charAt(0));
 
             System.out.println("Ответ: " + calc.getResult());
 
             do {
                 System.out.println("Хотите продолжить вычисления? [y/n]: ");
-                calc.setReply(scanner.next().charAt(0));
-                if(calc.getReply() == 'n') {
+                reply = scanner.next().charAt(0);
+                if(reply == 'n') {
                     break;
                 }
-            } while(calc.getReply() !='y');
+            } while(reply !='y');
 
-            if(calc.getReply() == 'n') {
+            if(reply == 'n') {
                 break;
             }
         }

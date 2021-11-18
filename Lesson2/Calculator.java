@@ -1,28 +1,28 @@
 public class Calculator {
 
     private int firstNumber;
-    private char symbol;
     private int secondNumber;
-    private int result ;
-    private char reply;
-
-    public int getFirstNumber() {
-        return firstNumber;
-    }
+    private char sign;
+    private int result;
 
     public void setFirstNumber(int firstNumber) {
         this.firstNumber = firstNumber;
     }
 
-    public char getSymbol() {
-        return symbol;
+    public void setSecondNumber(int secondNumber) {
+        this.secondNumber = secondNumber;
     }
 
-    public void setSymbol(char symbol) {
-        this.symbol = symbol;
-        switch(symbol) {
+    public void setSign(char sign) {
+        this.sign = sign;
+    }
+
+
+    public void calculate(char sign) {
+        switch(sign) {
             case '+':
                 result = firstNumber + secondNumber;
+                System.out.println(result);
                 break;
             case '-':
                 result = firstNumber - secondNumber;
@@ -49,27 +49,8 @@ public class Calculator {
         }
     }
 
-    public int getSecondNumber() {
-        return secondNumber;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
     public int getResult() {
         return result;
     }
 
-    public void setResult(int result) {
-        this.result = result;
-    }
-    
-    public char getReply() {
-        return reply;
-    }
-
-    public void setReply(char reply) {
-        this.reply = reply;
-    }
 }
