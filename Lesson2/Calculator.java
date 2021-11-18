@@ -3,7 +3,6 @@ public class Calculator {
     private int firstNumber;
     private int secondNumber;
     private char sign;
-    private int result;
 
     public void setFirstNumber(int firstNumber) {
         this.firstNumber = firstNumber;
@@ -17,40 +16,34 @@ public class Calculator {
         this.sign = sign;
     }
 
-
-    public void calculate(char sign) {
+    public void calculate() {
         switch(sign) {
             case '+':
-                result = firstNumber + secondNumber;
-                System.out.println(result);
+                System.out.println(firstNumber + secondNumber);
                 break;
             case '-':
-                result = firstNumber - secondNumber;
+                System.out.println(firstNumber - secondNumber);
                 break;
             case '*':
-                result = firstNumber * secondNumber;
+                System.out.println(firstNumber * secondNumber);
                 break;
             case '%': 
-                result = firstNumber % secondNumber;
+                System.out.println(firstNumber % secondNumber);
                 break;
             case '^':
-                result = 1;
+                int result = 1;
                 while(secondNumber > 0) {
                     result *= firstNumber;
                     secondNumber--;
                 }
+                System.out.println(result);
                 break;
             case '/' :
-                result = firstNumber / secondNumber;
+                System.out.println(firstNumber / secondNumber);
                 break;
             default :
                 System.out.println("Неверная операция");
                 break;
         }
     }
-
-    public int getResult() {
-        return result;
-    }
-
 }

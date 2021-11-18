@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        char reply;
+        String reply = "yes";
         Calculator calc = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        while(true) {
+        while(reply.equals("yes")) {
             System.out.println("Введите первое число: ");
             calc.setFirstNumber(scanner.nextInt());
 
@@ -15,19 +15,14 @@ public class CalculatorTest {
             System.out.println("Введите знак математической операции: ");
             calc.setSign(scanner.next().charAt(0));
 
-            System.out.println("Ответ: " + calc.getResult());
+            System.out.print("Ответ: ");
+            calc.calculate();
 
             do {
-                System.out.println("Хотите продолжить вычисления? [y/n]: ");
-                reply = scanner.next().charAt(0);
-                if(reply == 'n') {
-                    break;
-                }
-            } while(reply !='y');
-
-            if(reply == 'n') {
-                break;
-            }
+                System.out.println("Хотите продолжить вычисления? [yes/no]: ");
+                scanner.nextLine();
+                reply = scanner.nextLine();
+            } while(!reply.equals("yes") && !reply.equals("no"));
         }
     }
 }
