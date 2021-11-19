@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        String reply = "yes";
         Calculator calc = new Calculator();
         Scanner scanner = new Scanner(System.in);
         while(reply.equals("yes")) {
@@ -17,7 +16,8 @@ public class CalculatorTest {
 
             System.out.print("Ответ: ");
             calc.calculate();
-
+            
+            String reply = "yes";
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]: ");
                 scanner.nextLine();
