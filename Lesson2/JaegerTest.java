@@ -1,6 +1,5 @@
 public class JaegerTest {
     public static void main(String[] args) {
-
         Jaeger jaegerFirst = new Jaeger();
         Jaeger jaegerSecond = new Jaeger();
 
@@ -33,11 +32,8 @@ public class JaegerTest {
         System.out.println("Показатели силы первого робота = " + jaegerFirst.getStrength());
         System.out.println("Показатели силы второго робота = " + jaegerSecond.getStrength());
 
-
         System.out.println("Показатели брони первого робота = " + jaegerFirst.getArmor());
         System.out.println("Показатели брони второго робота = " + jaegerSecond.getArmor());
-
-
 
         System.out.println("Рост первого робота= " + jaegerFirst.getHeight());
 
@@ -48,10 +44,8 @@ public class JaegerTest {
         }
         System.out.println("Рост второго робота = " + jaegerSecond.getHeight());
 
-
         System.out.println("Вес первого робота = " + jaegerFirst.getWeight());
         System.out.println("Вес второго робота = " + jaegerFirst.getWeight());
-
 
         System.out.println("Состояние первого робота = " + jaegerFirst.getStatus());
         System.out.println("Состояние второго робота = " + jaegerSecond.getStatus());
