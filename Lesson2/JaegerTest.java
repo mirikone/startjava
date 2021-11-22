@@ -1,23 +1,23 @@
 public class JaegerTest {
     public static void main(String[] args) {
-        Jaeger jaegerFirst = new Jaeger();
-        Jaeger jaegerSecond = new Jaeger();
+        Jaeger jaegerFirst = new Jaeger("Cherno Alpha", 3, 10, 10, 280, 2.412f, "Разрушен");
+        Jaeger jaegerSecond = new Jaeger("Romeo Blue", 2, 7, 6, 255, 7.775f, "Разрушен");
 
-        jaegerFirst.setName("Cherno Alpha");
+/*        jaegerFirst.setName("Cherno Alpha");
         jaegerFirst.setSpeed(3);
         jaegerFirst.setStrength(10);
         jaegerFirst.setArmor(10);
         jaegerFirst.setHeight(280);
         jaegerFirst.setWeight(2.412f);
-        jaegerFirst.setStatus("Разрушен");
+        jaegerFirst.setStatus("Разрушен");*/
 
-        jaegerSecond.setName("Romeo Blue");
+/*        jaegerSecond.setName("Romeo Blue");
         jaegerSecond.setSpeed(2);
         jaegerSecond.setStrength(7);
         jaegerSecond.setArmor(6);
         jaegerSecond.setHeight(255);
         jaegerSecond.setWeight(7.775f);
-        jaegerSecond.setStatus("Разрушен");
+        jaegerSecond.setStatus("Разрушен");*/
 
         jaegerFirst.setName("Belo-Cherno Alpa");
         System.out.println("Наименование первого робота = " + jaegerFirst.getName());
