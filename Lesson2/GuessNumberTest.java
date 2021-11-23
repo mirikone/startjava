@@ -5,22 +5,22 @@ public class GuessNumberTest {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Первый игрок введите имя : ");
-        String nameFirst = scanner.nextLine();
-        Player playerFirst = new Player(nameFirst);
+        String firstName = scanner.nextLine();
+        Player firstPlayer = new Player(firstName);
 
         System.out.println("Второй игрок введите имя : ");
-        String nameSecond = scanner.nextLine();
-        Player playerSecond = new Player(nameSecond);
+        String secondName = scanner.nextLine();
+        Player secondPlayer = new Player(secondName);
 
-        GuessNumber start = new GuessNumber(playerFirst, playerSecond);
+        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
 
         String reply;
+        do {
+            game.start();
             do {
-                start.playGame();
-                do {
-                    System.out.println("Хотите продолжить игру? [yes/no]: ");
-                    reply = scanner.nextLine();
-                } while(!reply.equals("yes") && !reply.equals("no"));
-            } while(reply.equals("yes"));
-        }
+                System.out.println("Хотите продолжить игру? [yes/no]: ");
+                reply = scanner.nextLine();
+            } while(!reply.equals("yes") && !reply.equals("no"));
+        } while(reply.equals("yes"));
     }
+}
