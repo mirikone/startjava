@@ -18,11 +18,11 @@ public class GuessNumber {
         System.out.println(randomNumber);
         do {
             inputNumber(firstPlayer);
-            if(compareNumbers(firstPlayer) == false) {
+            if(compareNumbers(firstPlayer)) {
                 break;
             }
             inputNumber(secondPlayer);
-            if(compareNumbers(secondPlayer) == false) {
+            if(compareNumbers(secondPlayer)) {
                 break;
             }
         } while(true);
@@ -33,16 +33,15 @@ public class GuessNumber {
         player.setNumber(scanner.nextInt());
     }
 
-    private Boolean compareNumbers(Player player) {
+    private boolean compareNumbers(Player player) {
         if (player.getNumber() == randomNumber) {
             System.out.println(player.getName() + "- Поздравляю, число угадано");
-            return false;
+            return true;
         } else if (player.getNumber() < randomNumber) {
             System.out.println("Данной число меньше того, что загадал компьютер");
-            return true;
         } else {
             System.out.println("Данной число больше того, что загадал компьютер");
-            return true;
         }
+        return false;
     }
 }
