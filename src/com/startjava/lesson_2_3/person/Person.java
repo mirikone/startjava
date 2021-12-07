@@ -10,11 +10,11 @@ public class Person {
     int age = 23;
 
     boolean run() {
-
+        return false;
     }
 
     String readBook() {
-
+        return null;
     }
 
     void danceTectonic() {
