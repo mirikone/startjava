@@ -1,13 +1,13 @@
-package com.startjava.lesson_2_3.robot;
+package com.startjava.lesson_2_3_4.robot;
 
 public class Jaeger {
-    private int speed;
-    private int strength;
-    private int armor;
+    private final int speed;
+    private final int strength;
+    private final int armor;
     private String name;
     private int height;
-    private float weight;
-    private String status;
+    private final float weight;
+    private final String status;
 
     public Jaeger(String name, int speed, int strength, int armor, int height, float weight, String status) {
         this.name = name;

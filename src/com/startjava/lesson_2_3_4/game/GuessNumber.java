@@ -1,13 +1,13 @@
-package com.startjava.lesson_2_3.game;
+package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
 import java.util.Random;
 
 public class GuessNumber {
     private int randomNumber;
-    private Player firstPlayer;
-    private Player secondPlayer;
-    private Scanner scanner = new Scanner(System.in);
+    private final Player firstPlayer;
+    private final Player secondPlayer;
+    private final Scanner scanner = new Scanner(System.in);
 
     public GuessNumber(Player firstPlayer, Player secondPlayer) {
         this.firstPlayer = firstPlayer;
