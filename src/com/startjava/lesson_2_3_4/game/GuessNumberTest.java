@@ -6,16 +6,21 @@ public class GuessNumberTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Первый игрок введите имя : ");
+        System.out.print("Первый игрок введите имя : ");
         String firstName = scanner.nextLine();
         Player firstPlayer = new Player(firstName);
 
-        System.out.println("Второй игрок введите имя : ");
+        System.out.print("Второй игрок введите имя : ");
         String secondName = scanner.nextLine();
         Player secondPlayer = new Player(secondName);
 
-        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
+        System.out.print("Третий игрок введите имя : ");
+        String thirdName = scanner.nextLine();
+        Player thirdPlayer = new Player(thirdName);
 
+        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer, thirdPlayer);
+
+        game.fate();
         String reply;
         do {
             game.start();
