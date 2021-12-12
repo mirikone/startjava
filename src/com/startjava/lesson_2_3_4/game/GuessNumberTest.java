@@ -14,13 +14,8 @@ public class GuessNumberTest {
         String secondName = scanner.nextLine();
         Player secondPlayer = new Player(secondName);
 
-        System.out.print("Третий игрок введите имя : ");
-        String thirdName = scanner.nextLine();
-        Player thirdPlayer = new Player(thirdName);
+        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
 
-        GuessNumber game = new GuessNumber(firstPlayer, secondPlayer, thirdPlayer);
-
-        game.fate();
         String reply;
         do {
             game.start();

@@ -3,17 +3,16 @@ package com.startjava.lesson_2_3_4.game;
 import java.util.Arrays;
 
 public class Player {
-    private final String[] names = new String[2];
+    private final String name;
     private final int[] numbers = new int[10];
     private int step;
-    private int numerator;
 
     public Player(String name) {
-        names[numerator] = name;
+        this.name = name;
     }
 
     public String getName() {
-        return names[numerator];
+        return name;
     }
 
     public int getNumber() {

@@ -8,17 +8,11 @@ public class GuessNumber {
     private int randomNumber;
     private final Player firstPlayer;
     private final Player secondPlayer;
-    private final Player thirdPlayer;
     private final Scanner scanner = new Scanner(System.in);
 
-    public GuessNumber(Player firstPlayer, Player secondPlayer, Player thirdPlayer) {
+    public GuessNumber(Player firstPlayer, Player secondPlayer) {
         this.firstPlayer = firstPlayer;
         this.secondPlayer = secondPlayer;
-        this.thirdPlayer = thirdPlayer;
-    }
-
-    public void fate() {
-
     }
 
     public void start() {
@@ -34,17 +28,11 @@ public class GuessNumber {
             if (countStep(secondPlayer)) {
                 break;
             }
-            thirdPlayer.setStep(i);
-            if (countStep(thirdPlayer)) {
-                break;
-            }
         }
         System.out.println("Числа " + firstPlayer.getName() + " :" + Arrays.toString(firstPlayer.getNumbers()));
-        System.out.println("Числа " + secondPlayer.getName() + " :" + Arrays.toString(secondPlayer.getNumbers()));
-        System.out.println("Числа " + thirdPlayer.getName() + " :" + Arrays.toString(thirdPlayer.getNumbers()));
         firstPlayer.clearArray();
+        System.out.println("Числа " + secondPlayer.getName() + " :" + Arrays.toString(secondPlayer.getNumbers()));
         secondPlayer.clearArray();
-        thirdPlayer.clearArray();
     }
 
     private void inputNumber(Player player) {
